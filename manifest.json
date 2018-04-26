@@ -1,0 +1,20 @@
+{
+    "name": "pkgpal-chrome",
+    "manifest_version": 2,
+    "description": "Show what packages do",
+    "version": "1.0",
+    "homepage_url": "https://github.com/marcus-crane/pkgpal-chrome",
+    "browser_action": {},
+    "content_scripts": [
+        {
+            "matches": [
+                "*://github.com/**/*"
+            ],
+            "js": ["pkgparse.js"]
+        }
+    ],
+    "permissions": [
+        "*://github.com/**/*",
+        "activeTab"
+    ]
+}
